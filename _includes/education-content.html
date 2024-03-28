@@ -1,0 +1,12 @@
+<div class="content">
+    <h4 class="title">{{ post.major }} · <span class="company"> {{ post.university }}</span></h4>
+    <h5 class="duration">{{ post.duration }} · GPA: {{ post.gpa }}</h5>
+
+    {% if post.coursework != empty %}
+    <div class="tags">
+        {% for course in post.coursework %}
+        <span>{{ course }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>

@@ -1,0 +1,15 @@
+# Site Settings
+head_title: "Hang Duong | Welcome!"
+title: "Hello, I'm Hang Duong."
+description: "As a last year student in Computer Science from UVic, I'm passionate about innovative software development, and dedicated to pushing technological boundaries. My focus lies in creating robust data system capable of handling large-scale data, as well as delving into physics-based simulations for computer graphics."
+url: '/' # the base hostname & protocol for your site
+nav: "true"
+footer_text: '© 2024 Hang Duong. Based on Phantom Template by Jami Gibbs'
+github: 'lapis2002'
+linkedin: hang-duong799
+mail: hang.duong799@gmail.com
+
+# Admin Settings
+admin_name: 'Hang Duong'
+admin_email: 'hang.duong799@gmail.com'
+google_analytics: "UA-9999999-99" # Update with your own tracking ID

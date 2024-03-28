@@ -1,0 +1,15 @@
+<div class="content">
+    <h4 class="title">{{ post.position }}   ·   <span class="company"> {{ post.company }}</span></h4>
+    <h5 class="duration">{{ post.duration }}</h5>
+    {% for des in post.description %}
+        <p class="excerpt"> {{ des }}</p>
+    {% endfor %}
+
+    {% if post.skills != empty %}
+    <div class="tags">
+        {% for skill in post.skills %}
+        <span>{{ skill }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>

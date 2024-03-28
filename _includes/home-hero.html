@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          {% if site.data.global.title != '' %}
+          <h1 class="text-center">{{site.data.global.title}}</h1>
+          {% endif %}
+
+          {% if site.data.global.description != '' %}
+          <p class="text-center">{{site.data.global.description}}</p>
+          {% endif %}
+
+          <div class="hero-buttons">
+
+            {% if site.data.global.linkedin != empty %}
+              <a href="https://linkedin.com/in/{{ site.data.global.linkedin }}">
+                <i class="fab fa-linkedin-in"></i>
+              </a>            
+            {% endif %}
+            {% if site.data.global.github != empty %}
+              <a href="https://github.com/{{ site.data.global.github }}">
+                <i class="fab fa-github-alt"></i>
+              </a>
+            {% endif %}
+            {% if site.data.global.mail != empty %}
+            <a href="mailto:{{ site.data.global.mail }}">
+              <i class="far fa-envelope"></i>
+            </a>
+            {% endif %}
+            
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

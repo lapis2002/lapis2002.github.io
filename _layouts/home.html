@@ -1,0 +1,74 @@
+{% include header.html %}
+
+    {% include home-hero.html %}
+
+    <main id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="experience">
+              <!-- <div class="break"></div> -->
+              {% if site.data.experience.section_title != '' %}
+                <h2 class="section-title text-center">{{ site.data.experience.section_title }}</h2>
+              {% endif %}
+              {% if site.data.experience.section_subtitle != '' %}
+                <p class="section-subtitle text-center">{{ site.data.experience.section_subtitle }}</p>
+              {% endif %}
+              {% for post in paginator.posts %}
+                {% if post.category == "experience" %}
+                <div class="wow fadeIn">
+                  {% include content.html %}
+                </div>
+                {% endif %}
+              {% endfor %}
+            </div>            
+            
+            <div id="education">
+              <!-- <div class="break"></div> -->
+              {% if site.data.education.section_title != '' %}
+              <h2 class="section-title text-center">{{ site.data.education.section_title }}</h2>
+              {% endif %}
+              {% if site.data.education.section_subtitle != '' %}
+              <p class="section-subtitle text-center">{{ site.data.education.section_subtitle }}</p>
+              {% endif %}
+              {% for post in paginator.posts %}
+              {% if post.category == "education" %}
+              <div class="wow fadeIn">
+                {% include content.html %}
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+
+            <div id="projects">
+              <!-- <div class="break"></div> -->
+              {% if site.data.posts.section_title != '' %}
+              <h2 class="section-title text-center">{{ site.data.posts.section_title }}</h2>
+              {% endif %}
+              {% if site.data.posts.section_subtitle != '' %}
+              <p class="section-subtitle text-center">{{ site.data.posts.section_subtitle }}</p>
+              {% endif %}
+                            
+              {% for post in paginator.posts %}
+              {% if post.category == "project" %}
+              <div class="wow fadeIn">
+                {% if post.position == "left" %}
+                {% include content-left.html %}
+                {% endif %}
+              
+                {% if post.position == "right" %}
+                {% include content-right.html %}
+                {% endif %}
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+
+            {% include pagination.html %}
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+{% include footer.html %}
